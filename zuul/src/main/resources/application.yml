@@ -1,0 +1,12 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    provider: /p/**  #provider表示要访问的端口的名字，将要访问的端口映射成/p/的下url
